@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url("https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1771&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.box-game {
+    padding: 9vh;
+    max-width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons {
+    margin: 4vh 0;
+    display: flex;
+    gap: 6vh;
+}
+
+button {
+    padding: 10px;
+    font-size: 40px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    transition: opacity 0.5s ease-in-out;
+}
+
+button:hover {
+    opacity: 0.8;
+    transition: all 0.1s;
+    transform: translateY(-3px)
+}
+
+button:active {
+    opacity: 0.7;
+    scale: 0.95;
+    transition: all 0.1s;
+}
+
+#pedra {
+    background-color: #bb5a0ae9;
+    box-shadow: 0 4px 12px rgba(187, 90, 10, 0.4);
+}
+
+#papel {
+    background-color: #37e50b;
+    box-shadow: 0 4px 12px rgba(55, 229, 11, 0.4);
+}
+
+#tesoura {
+    background-color: #984eecdd;
+    box-shadow: 0 4px 12px rgba(152, 78, 236, 0.4);
+}
+
+p {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 2vh;
+}
+
+.you-score span {
+    color: #0993ca;
+}
+
+.machine-score span {
+    color: #c90f0fdf;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jokenpô</title>
+    <link rel="stylesheet" href="styles.CSS">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <main class="box-game">
+
+        <h1>Jokenpô</h1>
+
+        <div class="buttons">
+
+            <button title="Rock" id="pedra" onclick="playHuman('pedra')">&#x1F44A;</button>
+
+            <button title="Paper" id="papel" onclick="playHuman('papel')">&#x1F590;</button>
+
+            <button title="Scissors" id="tesoura" onclick="playHuman('tesoura')">&#x270C;</button>
+
+        </div>
+
+        <P class="result"></P>
+
+        <p class="you-score">Sua pontuação: <span id="human-score">0</span></p>
+
+        <p class="machine-score">Pontuação da máquina: <span id="machine-score">0</span></p>
+
+        <p>Escolha da máquina: <span class="machine-result"></span></p>
+
+    </main>
+    
+</body>
+<script src="scripts.JS"></script>
+</html>
