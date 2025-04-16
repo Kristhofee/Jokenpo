@@ -5,50 +5,66 @@
 }
 
 body {
-    background: url("https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1771&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-    background-size: cover;
+    background: url("https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1771&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") center/cover no-repeat fixed;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    padding: 20px;
 }
 
 .box-game {
-    padding: 9vh;
-    max-width: 100%;
+    padding: 5vh 3vw;
+    width: 100%;
+    max-width: 800px;
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 12px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: clamp(24px, 5vw, 36px);
+    margin-bottom: 3vh;
+    text-align: center;
 }
 
 .buttons {
     margin: 4vh 0;
     display: flex;
-    gap: 6vh;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3vh;
+    width: 100%;
 }
 
 button {
     padding: 10px;
-    font-size: 40px;
+    font-size: clamp(30px, 8vw, 50px);
     cursor: pointer;
     border: none;
     border-radius: 10px;
-    transition: opacity 0.5s ease-in-out;
+    transition: all 0.3s ease;
+    min-width: 80px;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 button:hover {
     opacity: 0.8;
-    transition: all 0.1s;
-    transform: translateY(-3px)
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 button:active {
     opacity: 0.7;
-    scale: 0.95;
-    transition: all 0.1s;
+    transform: scale(0.95) translateY(0);
 }
 
 #pedra {
@@ -68,8 +84,18 @@ button:active {
 
 p {
     font-weight: bold;
-    font-size: 20px;
+    font-size: clamp(16px, 4vw, 20px);
     margin-bottom: 2vh;
+    text-align: center;
+}
+
+.result {
+    font-size: clamp(18px, 4.5vw, 24px);
+    margin: 2vh 0;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    text-align: center;
 }
 
 .you-score span {
@@ -78,4 +104,37 @@ p {
 
 .machine-score span {
     color: #c90f0fdf;
+}
+
+.machine-result {
+    font-size: 24px;
+    margin-left: 5px;
+}
+
+@media (max-width: 600px) {
+    .box-game {
+        padding: 4vh 15px;
+    }
+
+    .buttons {
+        gap: 2vh;
+    }
+
+    button {
+        min-width: 70px;
+        min-height: 70px;
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 400px) {
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    button {
+        width: 100%;
+        max-width: 200px;
+    }
 }
