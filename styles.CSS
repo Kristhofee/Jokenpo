@@ -98,8 +98,12 @@ p {
     text-align: center;
 }
 
-.you-score span {
+.draws span {
     color: #0993ca;
+}
+
+.you-score span {
+    color: #37e50b;
 }
 
 .machine-score span {
